@@ -7,10 +7,12 @@
     <groupId>com.study</groupId>
     <artifactId>SpringBoot</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <packaging>jar</packaging>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <app.name>study</app.name>
+        <app.verion>1.0</app.verion>
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -23,5 +25,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
-
+    <build>
+        <finalName>${app.name}-${app.verion}</finalName>
+    </build>
 </project>
